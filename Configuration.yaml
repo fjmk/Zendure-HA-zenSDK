@@ -1871,7 +1871,7 @@ rest_command:
     headers:
       Content-Type: application/json
       Content-Encoding: identity
-    payload: '{"sn":"{{sn}}","properties":{"smartMode": 0, "outputLimit": 0, "inputLimit": 0 }}'
+    payload: '{"sn":"{{sn}}","properties":{"smartMode": 0, "acMode": 2, "outputLimit": 0, "inputLimit": 0 }}'
     
   zendure_instelling:
     url: http://{{ states('input_text.zendure_2400_ac_ip_adres') }}/properties/write
