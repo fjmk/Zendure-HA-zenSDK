@@ -464,7 +464,7 @@ views:
                   show: true
                   show_states: true
                   title: ''
-                graph_span: 5min
+                graph_span: 10min
                 series:
                   - entity: sensor.zendure_2400_ac_vermogen_aansturing
                     name: Batterij
@@ -593,6 +593,8 @@ views:
                     strokeDashArray: 0
                     borderColor: rgb(52,52,52)
                     show: true
+                    padding:
+                      top: -10
                   chart:
                     height: 150px
                   legend:
@@ -613,7 +615,7 @@ views:
                       size: 0
           - type: heading
             icon: ''
-            heading: Nul import
+            heading: Nul Import
             heading_style: title
             badges:
               - type: entity
@@ -681,6 +683,8 @@ views:
                 show: true
                 borderColor: '#332f2c'
                 strokeDashArray: 0
+                padding:
+                  top: -10
               chart:
                 height: 150px
               legend:
@@ -748,7 +752,7 @@ views:
           - type: heading
             icon: ''
             heading_style: title
-            heading: Import/Export
+            heading: Import | Export
             badges:
               - type: entity
                 show_state: true
@@ -765,9 +769,9 @@ views:
           - type: entities
             entities:
               - entity: sensor.zendure_2400_ac_energie_import
-                name: Opgeladen
+                name: Import
               - entity: sensor.zendure_2400_ac_energie_export
-                name: Ontladen
+                name: Export
           - type: custom:apexcharts-card
             header:
               show: true
@@ -793,6 +797,8 @@ views:
                 show: true
                 borderColor: '#332f2c'
                 strokeDashArray: 0
+                padding:
+                  top: -10
               chart:
                 height: 150px
               legend:
@@ -806,7 +812,7 @@ views:
                   color: '#616269'
             series:
               - entity: sensor.zendure_2400_ac_energie_import
-                name: Opgeladen
+                name: Import
                 statistics:
                   period: month
                   type: change
@@ -816,7 +822,7 @@ views:
                 show:
                   in_header: false
               - entity: sensor.zendure_2400_ac_energie_export
-                name: Ontladen
+                name: Export
                 statistics:
                   period: month
                   type: change
@@ -901,6 +907,8 @@ views:
                     show: true
                     borderColor: '#332f2c'
                     strokeDashArray: 0
+                    padding:
+                      top: -10
                   chart:
                     height: 150px
                     stacked: true
@@ -1048,6 +1056,8 @@ views:
                     show: true
                     borderColor: '#332f2c'
                     strokeDashArray: 0
+                    padding:
+                      top: -10
                   chart:
                     height: 150px
                     stacked: true
@@ -1187,6 +1197,8 @@ views:
             entities:
               - entity: sensor.zendure_2400_ac_aantal_batterijen
                 name: Aantal Batterijen
+              - entity: sensor.zendure_2400_ac_totale_capaciteit
+                name: Totale Capaciteit
               - entity: sensor.zendure_2400_ac_signaalsterkte
                 name: Signaalsterkte
               - entity: sensor.zendure_2400_ac_error
@@ -1264,6 +1276,8 @@ views:
                 show: true
                 borderColor: '#332f2c'
                 strokeDashArray: 0
+                padding:
+                  top: -10
               chart:
                 height: 150px
               legend:
@@ -1363,6 +1377,8 @@ views:
                 show: true
                 borderColor: '#332f2c'
                 strokeDashArray: 0
+                padding:
+                  top: -10
               chart:
                 height: 150px
               legend:
@@ -1555,6 +1571,7 @@ views:
             experimental:
               hidden_by_default: true
               color_threshold: true
+            update_interval: 5min
             header:
               show: true
               title: ''
@@ -1581,6 +1598,8 @@ views:
                 show: true
                 borderColor: '#332f2c'
                 strokeDashArray: 0
+                padding:
+                  top: -10
               chart:
                 height: 150px
               legend:
@@ -1598,14 +1617,14 @@ views:
                 stroke_width: 2
                 opacity: 0.2
                 extend_to: now
-                group_by:
-                  func: avg
-                  duration: 5min
+                statistics:
+                  period: 5minute
+                  type: mean
+                  align: start
                 type: area
                 color: '#e4e4e7'
                 show:
                   in_header: false
-                  extremas: max
                 color_threshold:
                   - value: 0
                     opacity: 0.2
@@ -1619,9 +1638,10 @@ views:
                     opacity: 0.6
               - entity: sensor.zendure_2400_ac_vermogen_aansturing
                 name: Import (gemiddeld)
-                group_by:
-                  func: avg
-                  duration: 5min
+                statistics:
+                  period: 5minute
+                  type: mean
+                  align: start
                 type: area
                 stroke_width: 0
                 opacity: 0
@@ -1658,6 +1678,7 @@ views:
             experimental:
               hidden_by_default: true
               color_threshold: true
+            update_interval: 5min
             header:
               show: true
               title: ''
@@ -1684,6 +1705,8 @@ views:
                 show: true
                 borderColor: '#332f2c'
                 strokeDashArray: 0
+                padding:
+                  top: -10
               chart:
                 height: 150px
               legend:
@@ -1701,14 +1724,14 @@ views:
                 stroke_width: 2
                 opacity: 0.2
                 extend_to: now
-                group_by:
-                  func: avg
-                  duration: 5min
+                statistics:
+                  period: 5minute
+                  type: mean
+                  align: start
                 type: area
                 color: '#e4e4e7'
                 show:
                   in_header: false
-                  extremas: max
                 color_threshold:
                   - value: 0
                     opacity: 0.2
@@ -1722,9 +1745,10 @@ views:
                     opacity: 0.6
               - entity: sensor.zendure_2400_ac_vermogen_aansturing
                 name: Export (gemiddeld)
-                group_by:
-                  func: avg
-                  duration: 5min
+                statistics:
+                  period: 5minute
+                  type: mean
+                  align: start
                 type: area
                 stroke_width: 0
                 opacity: 0
@@ -1929,17 +1953,29 @@ views:
                 tap_action:
                   action: navigate
                   navigation_path: /dashboard-zendure/releasenotes
+          - type: markdown
+            content: >-
+              <ha-alert alert-type="info">Helptekst</ha-alert>Hier kun je zien
+              welke package versie je gebruikt en wat de nieuwste versie is op
+              GitHub. Ook zie je meteen hoeveel problemen er openstaan en kun je
+              hier op doorklikken naar GitHub.
+            text_only: true
+            visibility:
+              - condition: state
+                entity: input_boolean.help_tonen_op_dashboard
+                state: 'on'
           - type: entities
             entities:
               - entity: sensor.zendure_2400_ac_configuratie_versie
                 name: Versie in gebruik
+              - entity: sensor.github_zendure_ha_zensdk_gielz1986
+                name: Versie op GitHub
               - entity: sensor.zendure_ha_zensdk_github_releasecheck
                 name: Releasecheck
           - type: markdown
             content: >
-              &nbsp;&nbsp;[![Release](https://img.shields.io/github/v/release/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge)](https://github.com/Gielz1986/Zendure-HA-zenSDK/releases) 
-              [![Open
-              Issues](https://img.shields.io/github/issues/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge)](https://github.com/Gielz1986/Zendure-HA-zenSDK/issues)
+              &nbsp;&nbsp;[![Open
+              Issues](https://img.shields.io/github/issues/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge&label=Openstaande%20Problemen&labelColor=029c7b&color=0d2e2b)](https://github.com/Gielz1986/Zendure-HA-zenSDK/issues)
             grid_options:
               columns: 12
               rows: auto

@@ -1,19 +1,19 @@
-[![Release](https://img.shields.io/github/v/release/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge)](https://github.com/Gielz1986/Zendure-HA-zenSDK/releases)
-[![Open Issues](https://img.shields.io/github/issues/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge)](https://github.com/Gielz1986/Zendure-HA-zenSDK/issues)
-[![Issue SLA](https://img.shields.io/badge/avg%20fix%20time-~7%20days-brightgreen?style=for-the-badge)](https://github.com/Gielz1986/Zendure-HA-zenSDK/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge)](https://github.com/Gielz1986/Zendure-HA-zenSDK/commits/main)
+[![Release](https://img.shields.io/github/v/release/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge&label=Huidige%20Release&&labelColor=029c7b&color=0d2e2b)](https://github.com/Gielz1986/Zendure-HA-zenSDK/releases)
+[![Open Issues](https://img.shields.io/github/issues/Gielz1986/Zendure-HA-zenSDK?style=for-the-badge&label=Openstaande%20Problemen&labelColor=029c7b&color=0d2e2b)](https://github.com/Gielz1986/Zendure-HA-zenSDK/issues)
+[![Issue SLA](https://img.shields.io/badge/Gemiddelde%20Oplostijd-~7%20Dagen-brightgreen?style=for-the-badge&labelColor=029c7b&color=0d2e2b)](https://github.com/Gielz1986/Zendure-HA-zenSDK/issues)
 
 #  Zendure Home Assistant
-**Om in 2️⃣ stappen je batterij lokaal werkend te krijgen in Home Assistant**.
+**Om in slechts 2️⃣ simpele stappen je batterij volledig lokaal werkend te krijgen in Home Assistant.**
 
-Gebaseerd op de [zenSDK RESTful API](https://github.com/Zendure/zenSDK) voor Home Assistant. Deze setup maakt lokaal verbinding met één Zendure Solarflow 2400 (AC, AC+ of AC Pro) / Zendure Solarflow 1600 AC+ / Zendure Solarflow 800 (Pro of Plus) **(zonder aangesloten zonnepanelen)** zonder gebruik te maken van integraties maar werkt met **één automatisering**. Voor de gene die graag de batterij 100% lokaal in eigen beheer wilt zonder updates van derden en netjes in Home Assistant. Inmiddels zijn er **11 voorgeprogrammeerde modussen** waarin de batterij kan leven, werken en shinen ✨ Voor elke smaak wat wils — van rustig sparen tot agressief knallen ⚡ De absolute publieksfavoriet? Natuurlijk de **Nul op de Meter-modus.** Want wie wil er nou niet elke maand die energierekening high-fiven? 😎
+Gebaseerd op de zenSDK RESTful API voor Home Assistant. Deze package maakt lokaal verbinding met één Zendure Solarflow 2400 (AC, AC+ of AC Pro) / Zendure Solarflow 1600 AC+ / Zendure Solarflow 800 (Pro of Plus). Perfect voor iedereen die zijn batterij **100% lokaal en volledig onder eigen controle** wil draaien in Home Assistant. Inmiddels zijn er **11 voorgeprogrammeerde modussen**  — van heerlijk NOMen op basis van de grote vuurbal tot energieboer spelen met dynamisch handelen voor een paar stuivers.
 
-Heb je de smaak te pakken en meerdere batterijen staan? Dan kun je dit uitbreiden met de [Node-RED proxy van Gast777](https://github.com/gast777/Zendure-zenSDK-proxy). Met deze proxy zorgt Node-RED ervoor dat alles binnen deze automatisering naadloos samenwerkt, waardoor meerdere identieke omvormers slim worden aangestuurd met een optimale vermogensverdeling.
+Heb je de smaak te pakken en meerdere omvormers staan? Dan kun je dit uitbreiden met de [Node-RED proxy van Gast777](https://github.com/gast777/Zendure-zenSDK-proxy). Met deze proxy zorgt Node-RED ervoor dat alles binnen deze automatisering naadloos samenwerkt, waardoor meerdere identieke omvormers slim worden aangestuurd met een optimale vermogensverdeling.
 
-Vind je dit project leuk en wil je mij steunen? Trakteer mij dan op een kopje koffie ☕️ – ik codeer beter met cafeïne!
+Vind je dit project nuttig en wil je de ontwikkeling supporten? <br>
+Trakteer mij op een kopje koffie ☕️ en volg deze GitHub repository ⭐⭐⭐.
 
 <a href="https://www.buymeacoffee.com/gielz" target="_blank">
-  <img src="https://github.com/Gielz1986/Zendure-zenSDK-HA/blob/main/Images/bmc.png?raw=true" width="150" alt="Buy Me a Coffee">
+  <img src="https://github.com/Gielz1986/Zendure-zenSDK-HA/blob/main/Images/bmc.png?raw=true" width="120" alt="Buy Me a Coffee">
 </a><br><br>
 
 
@@ -21,9 +21,9 @@ Vind je dit project leuk en wil je mij steunen? Trakteer mij dan op een kopje ko
 
 #### ℹ️ Benodigde hardware
 
-- Homewizard P1 (of een andere P1/CT-meter die data per seconden levert waarbij +watt afname is en -watt teruglevering).
-- één Zendure Solarflow 2400 (AC, AC+ of AC Pro) / Zendure Solarflow 1600 AC+ / Zendure Solarflow 800 (Pro of Plus) **(zonder aangesloten zonnepanelen)**.
-- Of twee dezelfde devices in combinatie met de [Node-RED proxy van Gast777](https://github.com/gast777/Zendure-zenSDK-proxy)
+- Homewizard P1 (of een andere P1/CT-meter die data per seconden levert (+watt afname / -watt teruglevering).
+- één Solarflow 2400 (AC, AC+ of AC Pro) / Solarflow 1600 AC+ / Solarflow 800 (Pro of Plus).
+- Of twee dezelfde omvormers in combinatie met de [Node-RED proxy van Gast777](https://github.com/gast777/Zendure-zenSDK-proxy)
 
 ---
 
@@ -71,7 +71,8 @@ homeassistant:
 
 </details>
 
-![Preview](Images/Instellingen-260226.png) 
+![Preview](Images/Instellingen-070326.png) 
+*plug-n-play dashboard
 
 | Uitleg per configuratie item | |  
 |-|-|
@@ -89,7 +90,7 @@ homeassistant:
 | `zendure_2400_ac_ontladen_starten_bij` | **(Instellingsadvies: 100 watt) 100-500 watt** – hier geef je aan wanneer de batterij exact begint met ontladen. Daarna balanceert de batterij naar 0 - de extra ontlaadmarge | 
 | `zendure_2400_ac_ontlaadmarge` | **(Instellingsadvies: 5 watt) 0-250 watt** – Geef hier aan hoeveel je extra wilt meenemen tijdens ontladen. Als je wat meer wilt ontladen dan noodzakelijk is | 
 | **Configuratie (Optioneel)** |**Informatie**|  
-| `afwijkende_p1_sensor` | **bijvoorbeeld `sensor.eigen_P1`** – je eigen afwijkende P1 sensor toevoegen waarbij +watt afname is en -watt teruglevering (vul je hier je eigen sensor in dan is deze altijd leidend)  |  
+| `afwijkende_p1_sensor` | **bijvoorbeeld `sensor.eigen_P1`** – je eigen afwijkende P1 sensor toevoegen waarbij +watt afname is en -watt teruglevering (vul je hier je eigen sensor in dan is deze altijd leidend). [Ga naar WIKI](https://github.com/Gielz1986/Zendure-HA-zenSDK/wiki/2-%E2%80%90-Afwijkende-P1-CT-meters-(API's)) voor afwijkende P1/CT API's. |  
 | `zendure_2400_ac_batterij_volgorde` | **bijvoorbeeld 1;5;3;4;2** – hiermee bepaal je zelf een afwijkende volgorde van de batterijen. De juiste volgorde bepaal je mede aan de hand van `sensor.zendure_2400_ac_batterij_serienummers` en de sticker op de batterij(en). Op deze manier zullen de batterijtemperaturen en het laadpercentage de juiste volgorde hebben zoals die van de batterij(en) in de stapel.| 
 | **Configuratie (Dynamisch)** |**Informatie**|  
 | `dynamisch_nordpool_sensor` | **bijvoorbeeld `sensor.nordpool_kwh_nl_eur_3_09_0`** – je eigen sensor van Nordpool (HACS) toevoegen.  |  
@@ -101,87 +102,9 @@ homeassistant:
 
 
 
-![Preview](Images/Dashboard-26022026.png) 
+![Preview](Images/Dashboard-070326.png) <br>
+[Ga naar de uitleg over alle entiteiten](https://github.com/Gielz1986/Zendure-HA-zenSDK/wiki/3-%E2%80%90-Beschikbare-entiteiten)
 
-<details>
-  <summary>🖱️ <strong>Klik hier</strong> 🖱️ om alle entiteiten te zien die beschikbaar zijn inclusief uitleg.</summary>
-
-| Categorie              | Entiteiten                              | Uitleg / Inhoud                                                        |
-| ---------------------- | -------------------------------------- | ------------------------------------------------------------ |
-| Configuratie           | Zendure 2400 AC IP-adres               | bijvoorbeeld **192.168.0.172** – In de Zendure app onder device Information                                      |
-|                        | Homewizard P1 IP-adres                 | bijvoorbeeld **192.168.0.192** – In de Homewizard app (lokale API aanzetten)                                      |
-|                        | Max. Ontlaadvermogen                   | 800-2400 watt – Geef hier aan met hoeveel vermogen hij maximaal mag ontladen. Bij meerdere omvormers via Node-RED kan dit tot 4800 watt |
-|                        | Max. Oplaadvermogen                    | 800-2400 watt – Geef hier aan met hoeveel vermogen hij maximaal mag laden. Bij meerdere omvormers via Node-RED kan dit tot 4800 watt  |
-|                        | Afwijkende P1 Sensor                   | bijvoorbeeld. `sensor.eigen_P1` – je eigen afwijkende P1 sensor toevoegen waarbij +watt afname is en -watt teruglevering (vul je hier je eigen sensor in dan is deze altijd leidend)                                       |
-|                        | Dynamisch Nordpool Sensor              | bijvoorbeeld `sensor.nordpool_kwh_nl_eur_3_09_0`                      |
-|                        | Dynamisch Nordpool Sensor              | bijvoorbeeld `sensor.nordpool_kwh_nl_eur_3_09_0`                      |
-|                        | Standby Vertraging                     | 5-30 minuten – Geef hier aan hoe snel de omvormer 100% in standby gaat bij 0 activiteit. Dit voorkomt sluipverbruik van +/- 19 watt                      |
-|                        | Oplaadmarge                            | 0-250 watt – Geef hier aan hoeveel minder je wilt meenemen tijdens opladen. Als je wat minder wilt opladen, in de zomer met voldoende opwek zou je dit zelfs op 200 kunnen zetten om import overdag 100% te voorkomen. (Zendure zelf hanteert hier 50 watt in HEMS)                          |
-|                        | Ontlaadmarge                           | 0-250 watt – Geef hier aan hoeveel je extra wilt meenemen tijdens ontladen. Als je wat meer wilt ontladen dan noodzakelijk is                    |
-|                        | Ontladen starten bij                   | 100-500 watt – hier geef geef je aan wanneer de batterij exact begint met ontladen. Daarna balanceert de batterij naar 0 + de extra ontlaadmarge                          |
-|                        | Opladen starten bij                    | -100--1000 watt – hier geef je aan wanneer de batterij exact begint met opladen. Daarna balanceert de batterij naar 0 - de extra oplaadmarge                    |
-|                        | Advies Instellingen Overnemen          | Zodra de batterij draait kun je met deze knop het instellingsadvies overnemen.                 |
-| P1                     | Homewizard P1 Vermogen                 | Vermogen van je Homewizard P1                                |
-|                        | P1 Nul Import Actief                   | Geeft aan dat er op dit moment geen import nodig is          |
-|                        | P1 Nul Import Duur (Vandaag)           | Hoeveel nul import uren heb je vandaag bereikt               |
-| Aansturing             | Modus Selecteren                       | Zie **Modus uitleg bij ✅ Batterij mag aan de slag**        |
-|                        | Handmatig Vermogen                     | Gebruikt in modus **Handmatig**                              |
-|                        | P1 Aansturing Vermogen                 | Homewizard P1 of afwijkende P1 sensor                        |
-|                        | SOC-limiet Status                      | Normale werking, Laadlimiet bereikt, en Ontlaadlimiet bereikt. |
-|                        | Laadpercentage                         | 5-100%                                                       |
-|                        | Resterende Ontlaad Tijd                | uur - minuten (⚠️ Foutief door bug in API)                   |
-|                        | Modus                                  | Opladen, Ontladen of Standby                                 |
-|                        | Vermogen Aansturing                    | -2400-2400 watt (vermogen import en vermogen export)          |
-|                        | Vermogen Import                        | 0-2400 watt                                                  |
-|                        | Vermogen Export                        | 0-2400 watt                                                  |
-|                        | Ingesteld Ontlaadvermogen              | 0-2400 watt                                                  |
-|                        | Ingesteld Oplaadvermogen               | 0-2400 watt                                                  |
-| Import/Export          | RTE Totaal                             | 0-100% (⚠️ extern meten via HomeWizard kWh Meter is aan te raden)|
-|                        | Energie Import                         | KWH                                                          |
-|                        | Energie Export                         | KWH                                                          |
-| Efficiëntie DC/AC      | Vermogen Export (DC)                   | 0-2400 watt                                                  |
-|                        | Efficiëntie Export                     | 0-100%                                                       |
-|                        | Vermogen Import (DC)                   | 0-2400 watt                                                  |
-|                        | Efficiëntie Import                     | 0-100%                                                       |
-|                        | Efficiëntie Import (24u gemiddelde)    | 0-100%                                                       |
-|                        | Efficiëntie Export (24u gemiddelde)    | 0-100%                                                       |
-| Gezondheid             | Configuratie Versie                    | Toont de versie van de entiteiten configuratie               |
-|                        | Relais Stand                           | Oplaadstaand of Ontlaadstand                                 |
-|                        | Relais Schakelingen Totaal (Vandaag)   | Hier worden alleen schakelingen geteld wanneer er vermogen op de relais komt. De slijtage is lager dan gebruikelijk omdat het vermogen opbouwend is bij Zendure.  50-100 keer per dag is gebruikelijk bij een relais met direct 100% vermogen.  |
-|                        | Signaalsterkte                         | Uitstekend, Goed, Zwak of Slecht                             |
-|                        | Aantal Batterijen                      | 1-6                                                          |
-|                        | Indicatie Beschikbare Energie          | 0 - 16,42 kwh (hierbij word rekening gehouden in de berekening met `sensor.zendure_2400_ac_efficientie_export_24u_gemiddelde` en `sensor.zendure_2400_ac_rte_totaal` wat zichtbaar is in de extra attributen.                                               |
-|                        | Error                                  | Geen meldingen of Zie Zendure APP                            |
-|                        | SOC Status                             | Goed of Kalibreren                                           |
-|                        | Omvormer Temperatuur                   | 0-100 °C                                                     |
-|                        | Opslagmodus                            | Opslaan in RAM of Opslaan in Flash                           |
-|                        | Batterijspanning                       | Voltage                                                      |
-|                        | Minimale Laadpercentage                | 5-100%                                                       |
-|                        | Maximale Laadpercentage                | 5-100%                                                       |
-|                        | Batterij 1-6 Temperatuur               | 0-100 °C                                                     |
-|                        | Batterij 1-6 Laadpercentage            | 5-100%                                                       |
-| Dynamisch              | Dynamisch Nordpool                     | Nordpool prijzen in 15min en 1uur                            |
-|                        | Dynamisch 15 Minuten                   | Prijzen in 15 minuten ipv 1 uur prijzen                      |
-|                        | Dynamisch Handmatige Periode           | bijvoorbeeld **G11:00;D12:00;G15:00** of **G11:00-13:00**                   |
-|                        | Dynamisch Handmatige Periode Morgen    | bijvoorbeeld **G11:00;D12:00;G15:00** of **G11:00-13:00**                   |
-|                        | Dynamisch Minimale Spread              | Gebruikt in modus **Dynamisch NOM**, **Dynamisch NOM (Duur)** em **Dynamisch Handelen**. Boven minimale spread laden     |
-|                        | Dynamisch Spread Indicatie             | Berekening spread                                            |
-|                        | Dynamisch Spread Indicatie NOM         | Berekening spread NOM, duurste na eerste laadactie           |
-|                        | Dynamisch Spread Indicatie Morgen      | Berekening spread                                            |
-|                        | Dynamisch Spread Indicatie NOM Morgen  | Berekening spread NOM, duurste na eerste laadactie           |
-|                        | Dynamisch Goedkoopste Periode          | Ja of Nee                                                    |
-|                        | Dynamisch Duurste Periode              | Ja of Nee                                                    |
-|                        | Dynamisch Goedkoopste X Periode        | 0-96                                                         |
-|                        | Dynamisch Duurste X Periode            | 0-96                                                         |
-|                        | Dynamisch Goedkoopste X Periode Morgen | 0-96                                                         |
-|                        | Dynamisch Duurste X Periode Morgen     | 0-96                                                         |
-|                        | Dynamisch Recent Geladen               | Word automatisch aan en uit gezet. Om te voorkomen dat er laadgedrag van 99>100>99>100 SOC ontstaat   |
-|                        | Dynamisch Ontladen Loopt               | Word automatisch aan en uit gezet. Noodzakelijk voor de aansturing maar kan ook gebruikt worden om te zien wanneer het heeft gelopen   |
-|                        | Dynamisch Laden Loopt                  | Word automatisch aan en uit gezet. Noodzakelijk voor de aansturing maar kan ook gebruikt worden om te zien wanneer het heeft gelopen   |
-| Geen categorie         | Serienummer                            | Serienummer van de omvormer                                         |
-|                        | Batterij Serienummers                  | Serienummers van de batterijen om te gebruiken tijdens configuratie van `input_text.zendure_2400_ac_batterij_volgorde`                                     |
-
-</details>
 
 <br>
 
@@ -207,38 +130,21 @@ Het moment is aangebroken: de batterij mag nu bewijzen dat hij meer is dan allee
 4. Kies hier je gewenste modus om de **Zendure zenSDK (Gielz) automatisering** te activeren.
 5. De batterij zal nu aan de slag gaan.
 
-![Preview](Images/Modus-16022026.gif) 
-
-<details>
-  <summary>🖱️ <strong>Klik hier</strong> 🖱️ voor een uitleg wat iedere modus doet.</summary>
-
-| Modus                         | Werking                               | Doel                                | 
-| ----------------------------- | -------------------------------------- | -------------------------------------- | 
-| Standby                | Zet volledig in standby en `sensor.zendure_2400_ac_opslagmodus` zal naar **Opslaan in Flash** gaan. Hierdoor is het ook 0 watt op een KWH MID Meter.                                       | 100% standby, de batterij gebruikt nog 0,2 kwh per dag.|
-| Handmatig              | Via `input_number.zendure_2400_ac_handmatig_vermogen` kun je zelf aangeven wat de batterij doet. -watt voor ontladen en +watt voor opladen.       | Voor als je zelf aan de knoppen wilt draaien. |
-| Nul op de meter        | Constant 0 op de meter behouden (-xx watt bij opladen en -xx watt bij ontladen). Je kunt het opladen finetunen via `input_number.zendure_2400_ac_oplaadmarge` waarbij je aangeeft hoeveel buffer/marge hij moet behouden tot 0 watt. Het ontladen kun je finetunen via `input_number.zendure_2400_ac_ontlaadmarge` waarbij je aangeeft hoeveel extra watt hij moet ontladen boven op 0 op de meter. Beide zijn handig om vaste kleine schommelingen in je huisverbruik standaard te compenseren.              | Zo min mogelijk energie importeren en exporteren |
-| Dynamisch NOM          | ⚠️ Let op: Alleen te gebruiken met Nordpool sensor. Vul als eerste in hoeveel uren je goedkoop zou willen laden per dag via `input_number.dynamisch_goedkoopste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Vervolgens vul je de overige duurste uren in via `input_number.dynamisch_duurste_x_periode_morgen` dit is bijvoorbeeld 21 uur. Wanneer nu `sensor.dynamisch_goedkoopste_periode` op JA staat zal er opgeladen worden indien `sensor.dynamisch_spread_indicatie_nom` hoger is dan `input_number.dynamisch_minimale_spread`. Wanneer `sensor.dynamisch_goedkoopste_periode` erg lang op JA staat zal hij pas weer gaan laden wanneer de batterij ontladen is tot 90%. Hij zal na laden constant 0 op de meter behouden (-xx watt bij opladen en -xx watt bij ontladen) en elke dag het dynamisch laden uitvoeren.                                        | Alle goedkope energie uitspreiden over de dag |
-| Dynamisch NOM (Duur)          | ⚠️ Let op: Alleen te gebruiken met Nordpool sensor. Vul als eerste in hoeveel uren je goedkoop zou willen laden per dag via `input_number.dynamisch_goedkoopste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Vervolgens vul je de overige duurste uren in via `input_number.dynamisch_duurste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Wanneer nu `sensor.dynamisch_goedkoopste_periode` op JA staat zal er opgeladen worden indien `sensor.dynamisch_spread_indicatie` hoger is dan `input_number.dynamisch_minimale_spread`. Wanneer `sensor.dynamisch_goedkoopste_periode` erg lang op JA staat zal hij pas weer gaan laden wanneer de batterij ontladen is tot 90%. Mocht er nog ruimte zijn om meer op te laden zal hij dit bij teruglevering gaan doen. Wanneer `sensor.dynamisch_duurste_periode` op JA staat zal hij NOM gaan ontladen en de rest van de tijd staat de batterij in standby.                                  | Alle goedkope energie specifiek gebruiken op de duurste uren |
-| Dynamisch Handelen          | ⚠️ Let op: Alleen te gebruiken met Nordpool sensor. Vul als eerste in hoeveel uren je goedkoop zou willen laden per dag via `input_number.dynamisch_goedkoopste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Vervolgens vul je de overige duurste uren in via `input_number.dynamisch_duurste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Wanneer nu `sensor.dynamisch_goedkoopste_periode` op JA staat zal er opgeladen worden indien `sensor.dynamisch_spread_indicatie` hoger is dan `input_number.dynamisch_minimale_spread`. Wanneer `sensor.dynamisch_goedkoopste_periode` erg lang op JA staat zal hij pas weer gaan laden wanneer de batterij ontladen is tot 90%. Wanneer `sensor.dynamisch_duurste_periode` op JA staat zal hij op maximaal vermogen gaan ontladen en de rest van de tijd staat de batterij in standby.                                 | Energie inkopen en verkopen |
-| Dynamisch Handelen + NOM          | ⚠️ Let op: Alleen te gebruiken met Nordpool sensor. Vul als eerste in hoeveel uren je goedkoop zou willen laden per dag via `input_number.dynamisch_goedkoopste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Vervolgens vul je de overige duurste uren in via `input_number.dynamisch_duurste_x_periode_morgen` dit is bijvoorbeeld 3 uur. Wanneer nu `sensor.dynamisch_goedkoopste_periode` op JA staat zal er opgeladen worden indien `sensor.dynamisch_spread_indicatie` hoger is dan `input_number.dynamisch_minimale_spread`. Wanneer `sensor.dynamisch_goedkoopste_periode` erg lang op JA staat zal hij pas weer gaan laden wanneer de batterij ontladen is tot 90%. Wanneer `sensor.dynamisch_duurste_periode` op JA staat zal hij op maximaal vermogen gaan ontladen en de rest van de tijd Nul op de meter.                                | Energie inkopen en verkopen + NOM |
-| Alleen slim ontladen   | Identiek aan **Nul op de meter** alleen zonder opladen.                                                |
-| Alleen slim opladen    | Identiek aan **Nul op de meter** alleen zonder ontladen.                                               |
-| Snel opladen  | Snel opladen op maximaal vermogen wat ingesteld staat bij `input_number.zendure_2400_ac_max_oplaadvermogen`                                                                     |
-| Snel ontladen | Snel ontladen op maximaal vermogen wat ingesteld staat bij `input_number.zendure_2400_ac_max_ontlaadvermogen`                                                                    |
-
-</details>
+![Preview](Images/Modus-16022026.gif) <br>
+[Ga naar de uitleg over alle verschillende modussen](https://github.com/Gielz1986/Zendure-HA-zenSDK/wiki/4-%E2%80%90-De-verschillende-modussen)
 
 <br><br>
 
 ## 🔃 (Optioneel) Plug-N-Play Dashboard
 Vanaf nu is het ook mogelijk om direct een volledig plug-n-play dashboard in gebruik te nemen.
 
-1. Voor dit dashboard is Apexcharts vereist; https://github.com/RomRider/apexcharts-card.
+1. Voor dit dashboard is [Apexcharts HACS](https://github.com/RomRider/apexcharts-card) vereist. En (optioneel) [Graphite HACS](https://github.com/TilmanGriesel/graphite).
 2. Maak een nieuw leeg dashboard aan.
 3. Open het nieuwe dashboard.
 4. Klik rechtsboven op het potlood en kies daarna onder de 3 puntjes **Ruwe configuratie-editor**.
 5. Plak de YAML-code `(zie dashboard bestand)`.
 6. Sla op en het dashboard is volledig bruikbaar.
+7. [Ga naar WIKI](https://github.com/Gielz1986/Zendure-HA-zenSDK/wiki/3-%E2%80%90-Beschikbare-entiteiten) om uitleg te krijgen over alle entiteiten.
 
 ![Preview](Images/Plug-N-Play-Dashboard.gif) 
 
